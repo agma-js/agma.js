@@ -19,3 +19,7 @@ const Agma = require('agma.js');
 // ES6
 import * as Agma from 'agma.js';
 ```
+
+## Documentation
+
+Visit agma.js docs [here](https://agma-js.github.io/agma.js-docs/)!
