@@ -5,8 +5,9 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
+    "addfiles": "touch docs/.nojekyll && echo agma.js.org>docs/CNAME",
     "build": "tsc",
-    "docs": "typedoc --theme node_modules/typedoc-neo-theme/bin/default --plugin typedoc-neo-theme && touch docs/.nojekyll",
+    "docs": "typedoc --theme node_modules/typedoc-neo-theme/bin/default --plugin typedoc-neo-theme && npm run addfiles",
     "format": "prettier --write \"src/**/*.(js|ts)\"",
     "lint": "eslint src --ext .js,.ts",
     "lint:fix": "eslint src --fix --ext .js,.ts",
