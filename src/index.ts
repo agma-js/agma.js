@@ -1,1 +1,1 @@
-export default 'This module must not be required!';
+export { getServers } from './features/getServers';
