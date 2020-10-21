@@ -1,14 +1,21 @@
-# NPM TypeScript Module Boilerplate
+# Agma.JS
 
-> Note: This module should **not** be required!
+> This module is **not** done yet
 
-### What is it?
+## Installation
 
-This is the boilerplate that you can use to build your awesome NPM modules using TypeScript ✨
+```shell
+# if you use NPM
+npm install --save agma.js
+# or, if you use Yarn
+yarn add agma.js
+```
 
-### How to use it?
+## Importing
 
-There are 2 ways to use it:
-
-1. Go to the [repository page](https://github.com/uWynell/typescript-module-boilerplate) and press the green **"Use this template"** button.
-2. Run the following command in the terminal: ```npx degit uWynell/typescript-module-boilerplate```
+```javascript
+// CommonJS
+const Agma = require('agma.js');
+// ES6
+import * as Agma from 'agma.js';
+```
