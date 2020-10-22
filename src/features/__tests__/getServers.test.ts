@@ -18,13 +18,6 @@ it('works in regular case', async () => {
   mock.onGet('https://agma.io/php_hscores_file.php', { params: { type: 3 } }).reply(200, idealResponse);
   const idealResult = idealResponse.map(Server.fromData);
   await expect(getServers()).resolves.toEqual(idealResult);
-  await expect(getServers('eu')).resolves.toEqual(idealResult.filter((server) => server.location === 'eu'));
-});
-
-it('throws a error in case of a invalid region given', async () => {
-  mock.onGet('https://agma.io/php_hscores_file.php', { params: { type: 3 } }).reply(200, idealResponse);
-  await expect(getServers('ao' as 'as')).rejects.toThrow('The given location does not exist');
-  await expect(getServers(({ foo: 'bar' } as unknown) as 'as')).rejects.toThrow('The given location does not exist');
 });
 
 it('throws a error in case of a broken server response', async () => {
