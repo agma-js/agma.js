@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Server } from '../entities/Server';
 
 /**
- * Get all available servers or all available server with specified location
+ * Get all available servers
  */
 export const getServers = async (): Promise<Server[]> => {
   const { data } = await axios.get('https://agma.io/php_hscores_file.php', { params: { type: 3 } });
