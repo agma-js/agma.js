@@ -1,7 +1,5 @@
 # Agma.JS
 
-> This module is **not** done yet
-
 ## Installation
 
 ```shell
