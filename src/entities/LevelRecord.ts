@@ -28,13 +28,13 @@ export class LevelRecord {
    * @param data Server object from API response
    */
   static fromData(data: unknown): LevelRecord {
-    const massRecord = new LevelRecord();
+    const levelRecord = new LevelRecord();
     if (!isLevelRecordData(data)) throw new TypeError('The given data is not assignable to type LevelRecordData');
-    massRecord.username = data.username.trim();
-    massRecord.memberType = Number(data.memberType.trim());
-    massRecord.moderatorType = Number(data.moderatorType.trim());
-    massRecord.donatorType = Number(data.dntn.trim());
-    massRecord.level = Number(data.level.trim());
-    return massRecord;
+    levelRecord.username = data.username.trim();
+    levelRecord.memberType = Number(data.memberType.trim());
+    levelRecord.moderatorType = Number(data.moderatorType.trim());
+    levelRecord.donatorType = Number(data.dntn.trim());
+    levelRecord.level = Number(data.level.trim());
+    return levelRecord;
   }
 }
