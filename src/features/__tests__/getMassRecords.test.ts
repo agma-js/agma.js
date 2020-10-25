@@ -42,7 +42,7 @@ const idealGiganticResponse = idealResponse.filter((server) => server.serverName
 const objectResponse = { foo: 'bar' };
 const stringResponse = 'baz';
 
-it('works in regular case without server id passed', async () => {
+it('works in regular case of no server id passed', async () => {
   mock
     .onGet('https://agma.io/php_hscores_file.php', { params: { type: 1, page: undefined } })
     .reply(200, idealResponse);
@@ -50,12 +50,19 @@ it('works in regular case without server id passed', async () => {
   await expect(getMassRecords()).resolves.toEqual(idealResult);
 });
 
-it('works in regular case with server id passed', async () => {
+it('works in regular case of correct server id passed', async () => {
   mock
     .onGet('https://agma.io/php_hscores_file.php', { params: { type: 1, page: 14 } })
     .reply(200, idealGiganticResponse);
   const idealResult = idealGiganticResponse.map(MassRecord.fromData);
   await expect(getMassRecords(14)).resolves.toEqual(idealResult);
+});
+
+it('throws a error in case of wrong server id passed', async () => {
+  mock
+    .onGet('https://agma.io/php_hscores_file.php', { params: { type: 1, page: 14 } })
+    .reply(200, idealGiganticResponse);
+  await expect(getMassRecords(999)).rejects.toThrow('Request failed with status code 404');
 });
 
 it('throws a error in case of a broken server response', async () => {
