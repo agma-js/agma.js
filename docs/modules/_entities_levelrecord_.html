@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>features/getServers | agma.js</title>
+	<title>entities/LevelRecord | agma.js</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,7 +55,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="_features_getservers_.html">features/getServers</a>
+					<a href="_entities_levelrecord_.html">entities/LevelRecord</a>
 				</li>
 			</ul>
 		</div>
@@ -72,7 +72,7 @@
 					<li class=" tsd-kind-module">
 						<a href="_entities_battleroyaleuser_.html">entities/BattleRoyaleUser</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="_entities_levelrecord_.html">entities/LevelRecord</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -90,7 +90,7 @@
 					<li class=" tsd-kind-module">
 						<a href="_features_getmassrecords_.html">features/getMassRecords</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="_features_getservers_.html">features/getServers</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -100,40 +100,101 @@
 			</nav>
 		</div>
 		<div class="col-7 offset-3 col-content">
-			<h1>Module features/getServers</h1>
+			<h1>Module entities/LevelRecord</h1>
 			<section class="tsd-panel-group tsd-index-group">
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
+							<h3>Classes</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_entities_levelrecord_.levelrecord.html" class="tsd-kind-icon">LevelRecord</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_entities_levelrecord_.html#levelrecorddata" class="tsd-kind-icon">LevelRecordData</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_features_getservers_.html#getservers" class="tsd-kind-icon">getServers</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_entities_levelrecord_.html#islevelrecorddata" class="tsd-kind-icon">isLevelRecordData</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="levelrecorddata" class="tsd-anchor"></a>
+					<h3>Level<wbr>Record<wbr>Data</h3>
+					<div class="tsd-signature tsd-kind-icon">Level<wbr>Record<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in entities/LevelRecord.ts:4</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>Level record object from API response</p>
+						</div>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>dntn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>level<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>member<wbr>Type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>moderator<wbr>Type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>username<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+						</ul>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
-					<a name="getservers" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>Servers</h3>
+					<a name="islevelrecorddata" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> is<wbr>Level<wbr>Record<wbr>Data</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Servers<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../classes/_entities_server_.server.html" class="tsd-signature-type">Server</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Level<wbr>Record<wbr>Data<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">data</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in features/getServers.ts:8</li>
+									<li>Defined in entities/LevelRecord.ts:17</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
 								<div class="lead">
-									<p>Get all available servers</p>
+									<p>Check if Agma.IO API response valid</p>
 								</div>
 							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../classes/_entities_server_.server.html" class="tsd-signature-type">Server</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>data: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+										<div class="lead">
+											<p>Server object from API response</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">data</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -143,8 +204,14 @@
 		<div class="col-2 col-menu secondary-menu">
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-class tsd-parent-kind-module root">
+						<a href="../classes/_entities_levelrecord_.levelrecord.html" class="tsd-kind-icon">Level<wbr>Record</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module root">
+						<a href="_entities_levelrecord_.html#levelrecorddata" class="tsd-kind-icon">Level<wbr>Record<wbr>Data</a>
+					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module root">
-						<a href="_features_getservers_.html#getservers" class="tsd-kind-icon">get<wbr>Servers</a>
+						<a href="_entities_levelrecord_.html#islevelrecorddata" class="tsd-kind-icon">is<wbr>Level<wbr>Record<wbr>Data</a>
 					</li>
 				</ul>
 			</nav>
