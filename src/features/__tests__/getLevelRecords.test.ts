@@ -15,8 +15,12 @@ const objectResponse = { foo: 'bar' };
 const stringResponse = 'baz';
 
 it('works in regular case without server id passed', async () => {
-  mock.onGet('https://agma.io/php_hscores_file.php', { params: { type: 2, page: 1 } }).reply(200, idealResponse);
-  mock.onGet('https://agma.io/php_hscores_file.php', { params: { type: 2, page: 6 } }).reply(200, []);
+  mock
+    .onGet('https://agma.io/php_hscores_file.php', { params: { type: 2, page: 1 } })
+    .reply(200, idealResponse.slice(0, 1));
+  mock
+    .onGet('https://agma.io/php_hscores_file.php', { params: { type: 2, page: 6 } })
+    .reply(200, idealResponse.slice(1));
   mock.onGet('https://agma.io/php_hscores_file.php', { params: { type: 2, page: 21 } }).reply(200, []);
   const idealResult = idealResponse.map(LevelRecord.fromData);
   await expect(getLevelRecords()).resolves.toEqual(idealResult);
