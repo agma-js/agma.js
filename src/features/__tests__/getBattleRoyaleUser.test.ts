@@ -48,7 +48,5 @@ it('throws a error in case of no user exists', async () => {
 
 it('throws a error in case of incorrect server response', async () => {
   mock.onGet('https://agma.io/royale_stats.php', { params: { user: 'mock_user' } }).reply(200, stringResponse);
-  await expect(getBattleRoyaleUser('mock_user')).rejects.toThrow(
-    'The user does not exist or have not played Battle Royale yet',
-  );
+  await expect(getBattleRoyaleUser('mock_user')).rejects.toThrow('The server response is not an array');
 });
