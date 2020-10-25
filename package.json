@@ -1,6 +1,6 @@
 {
   "name": "agma.js",
-  "version": "0.7.2",
+  "version": "1.0.0",
   "description": "Access the public Agma.IO APIs with ease",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
