@@ -28,8 +28,8 @@ export class LevelRecord {
    * @param data Server object from API response
    */
   static fromData(data: unknown): LevelRecord {
-    const levelRecord = new LevelRecord();
     if (!isLevelRecordData(data)) throw new TypeError('The given data is not assignable to type LevelRecordData');
+    const levelRecord = new LevelRecord();
     levelRecord.username = data.username.trim();
     levelRecord.memberType = Number(data.memberType.trim());
     levelRecord.moderatorType = Number(data.moderatorType.trim());

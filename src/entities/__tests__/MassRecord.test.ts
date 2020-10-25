@@ -19,7 +19,7 @@ const incompleteMassRecordData = {
   score: '20322',
 };
 
-it('works in case of a good server data', () => {
+it('works in case of a good mass record data', () => {
   expect(MassRecord.fromData(idealMassRecordData)).toMatchObject({
     username: 'Sora',
     memberType: 2,
@@ -31,7 +31,7 @@ it('works in case of a good server data', () => {
   });
 });
 
-it('throws a error in case of incomplete server data', () => {
+it('throws a error in case of an incomplete mass record data', () => {
   expect(() => MassRecord.fromData(incompleteMassRecordData)).toThrow(
     'The given data is not assignable to type MassRecord',
   );

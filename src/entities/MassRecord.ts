@@ -38,8 +38,8 @@ export class MassRecord {
    * @param data Server object from API response
    */
   static fromData(data: unknown): MassRecord {
-    const massRecord = new MassRecord();
     if (!isMassRecordData(data)) throw new TypeError('The given data is not assignable to type MassRecordData');
+    const massRecord = new MassRecord();
     massRecord.username = data.username;
     massRecord.memberType = Number(data.memberType);
     massRecord.moderatorType = Number(data.moderatorType);

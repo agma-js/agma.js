@@ -87,9 +87,9 @@ export class BattleRoyaleUser {
    * @param data Server object from API response
    */
   static fromData(data: unknown, username: string): BattleRoyaleUser {
-    const user = new BattleRoyaleUser();
     if (!isBattleRoyaleUserData(data))
       throw new TypeError('The given data is not assignable to type BattleRoyaleUserData');
+    const user = new BattleRoyaleUser();
     user.username = username;
     user.matches = Number(data.matches);
     user.wins = Number(data.wins);

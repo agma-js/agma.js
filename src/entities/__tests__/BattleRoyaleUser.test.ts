@@ -38,7 +38,7 @@ const incompleteBattleRoyaleUserData = {
   weekly_wins: '0',
 };
 
-it('works in case of a good server data', () => {
+it('works in case of a good battle royale user data', () => {
   expect(BattleRoyaleUser.fromData(idealBattleRoyaleUserData, 'mock_user')).toMatchObject({
     username: 'mock_user',
     matches: 163,
@@ -67,7 +67,7 @@ it('works in case of a good server data', () => {
   });
 });
 
-it('throws a error in case of incomplete server data', () => {
+it('throws a error in case of a bad battle royale user data', () => {
   expect(() => BattleRoyaleUser.fromData(incompleteBattleRoyaleUserData, 'mock_user')).toThrow(
     'The given data is not assignable to type BattleRoyaleUserData',
   );

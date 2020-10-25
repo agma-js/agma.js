@@ -13,7 +13,7 @@ const incompleteLevelRecordData = {
   memberType: ' 2 \n',
 };
 
-it('works in case of a good server data', () => {
+it('works in case of a good level record data', () => {
   expect(LevelRecord.fromData(idealLevelRecordData)).toMatchObject({
     username: 'KiiZaru',
     level: 544,
@@ -23,7 +23,7 @@ it('works in case of a good server data', () => {
   });
 });
 
-it('throws a error in case of incomplete server data', () => {
+it('throws a error in case of a bad level record data', () => {
   expect(() => LevelRecord.fromData(incompleteLevelRecordData)).toThrow(
     'The given data is not assignable to type LevelRecord',
   );

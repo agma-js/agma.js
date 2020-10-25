@@ -26,8 +26,8 @@ export class Server {
    * @param data Server object from API response
    */
   static fromData(data: unknown): Server {
-    const server = new Server();
     if (!isServerData(data)) throw new TypeError('The given data is not assignable to type ServerData');
+    const server = new Server();
     server.id = Number(data.serverId);
     server.name = data.serverName;
     server.location = Number(data.serverLocation);

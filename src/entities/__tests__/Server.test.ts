@@ -12,6 +12,6 @@ it('works in case of a good server data', () => {
   });
 });
 
-it('throws a error in case of incomplete server data', () => {
+it('throws a error in case of an incomplete server data', () => {
   expect(() => Server.fromData(incompleteServerData)).toThrow('The given data is not assignable to type ServerData');
 });
