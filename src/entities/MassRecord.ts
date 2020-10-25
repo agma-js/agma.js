@@ -25,37 +25,13 @@ export const isMassRecordData = (data: any): data is MassRecordData =>
   'score' in data &&
   'serverName' in data;
 
-/**
- * The server entity
- */
 export class MassRecord {
-  /**
-   * The username of person
-   */
   username = '';
-  /**
-   * The type of member
-   */
   memberType = 0;
-  /**
-   * The type of moderator
-   */
   moderatorType = 0;
-  /**
-   * The type of donator
-   */
   donatorType = 0;
-  /**
-   * The date of record
-   */
   date = new Date();
-  /**
-   * The record score
-   */
   score = 0;
-  /**
-   * The name of server
-   */
   serverName = '';
   /**
    * Convert Agma.IO API response data to the Server entity

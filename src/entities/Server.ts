@@ -16,25 +16,10 @@ export type ServerData = {
 export const isServerData = (data: any): data is ServerData =>
   'serverId' in data && 'serverName' in data && 'serverLocation' in data && 'active' in data;
 
-/**
- * The server entity
- */
 export class Server {
-  /**
-   * The server ID
-   */
   id = 0;
-  /**
-   * The server name
-   */
   name = '';
-  /**
-   * The server location
-   */
   location = 0;
-  /**
-   * Is server online?
-   */
   online = false;
   /**
    * Convert Agma.IO API response data to the Server entity

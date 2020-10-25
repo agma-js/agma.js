@@ -1,5 +1,5 @@
 /**
- * Mass record object from API response
+ * Level record object from API response
  */
 export type LevelRecordData = {
   username: string;
@@ -17,29 +17,11 @@ export type LevelRecordData = {
 export const isLevelRecordData = (data: any): data is LevelRecordData =>
   'username' in data && 'level' in data && 'memberType' in data && 'moderatorType' in data && 'dntn' in data;
 
-/**
- * The server entity
- */
 export class LevelRecord {
-  /**
-   * The username of person
-   */
   username = '';
-  /**
-   * The type of member
-   */
   memberType = 0;
-  /**
-   * The type of moderator
-   */
   moderatorType = 0;
-  /**
-   * The type of donator
-   */
   donatorType = 0;
-  /**
-   * The level of player
-   */
   level = 0;
   /**
    * Convert Agma.IO API response data to the Server entity
